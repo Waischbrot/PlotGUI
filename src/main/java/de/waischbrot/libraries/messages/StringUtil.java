@@ -5,9 +5,9 @@ import net.md_5.bungee.api.ChatColor;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public final class MessageUtil {
+public final class StringUtil {
 
-    public static String getMessageColour(String text) {
+    public static String color(String text) {
         Pattern pattern = Pattern.compile("#[a-fA-F0-9]{6}");
         Matcher match = pattern.matcher(text);
 
