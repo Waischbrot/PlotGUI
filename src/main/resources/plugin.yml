@@ -1,0 +1,6 @@
+name: Plotgui
+version: 1.0
+main: de.waischbrot.plotgui.Main
+api-version: 1.16
+authors: [ Waischbrot ]
+description: IDK WHY
