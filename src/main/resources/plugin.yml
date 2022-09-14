@@ -4,3 +4,10 @@ main: de.waischbrot.plotgui.Main
 api-version: 1.16
 authors: [ Waischbrot ]
 description: IDK WHY
+
+commands:
+  plotgui:
+    aliases:
+      - pgui
+      - plot
+      - plotsettings
