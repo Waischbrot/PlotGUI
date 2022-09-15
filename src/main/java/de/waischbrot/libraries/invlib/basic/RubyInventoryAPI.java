@@ -1,9 +1,9 @@
 package de.waischbrot.libraries.invlib.basic;
 
+import de.waischbrot.plotgui.Main;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.inventory.Inventory;
-import org.bukkit.plugin.java.JavaPlugin;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -12,14 +12,14 @@ import java.util.UUID;
 
 public class RubyInventoryAPI {
 
-    private final JavaPlugin plugin;
+    private final Main plugin;
     private static RubyInventoryAPI instance;
     private final HashMap<UUID, RubyInventory> players = new HashMap<>();
     private final Listener listener = new RubyInventoryListener(this);
 
     private boolean initialised = false;
 
-    public RubyInventoryAPI(JavaPlugin plugin) {
+    public RubyInventoryAPI(Main plugin) {
         if (plugin == null) throw new IllegalArgumentException("Plugin ist NULL!");
         this.plugin = plugin;
         instance = this;
@@ -57,7 +57,7 @@ public class RubyInventoryAPI {
         return null;
     }
 
-    public JavaPlugin getPlugin() {
+    public Main getPlugin() {
         return plugin;
     }
 
