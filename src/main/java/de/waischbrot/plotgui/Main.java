@@ -2,6 +2,7 @@ package de.waischbrot.plotgui;
 
 import de.waischbrot.libraries.invlib.basic.RubyInventoryAPI;
 import de.waischbrot.plotgui.commands.PlotCommand;
+import de.waischbrot.plotgui.function.Configuration;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.Bukkit;
 import org.bukkit.command.PluginCommand;
