@@ -11,7 +11,9 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryOpenEvent;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 public class OnlineMenu extends RubyInventory {
 
@@ -38,11 +40,17 @@ public class OnlineMenu extends RubyInventory {
             final var newPlayers = Bukkit.getOnlinePlayers();
             if (!newPlayers.equals(players)) {
                 pagination.getButtons().clear();
+                List<String> lore = new ArrayList<>();
                 for (final Player newPlayer : newPlayers) {
+                    lore.add(StringUtil.color("&8"));
                     pagination.addButton(new Button(new ItemBuilder(Material.PLAYER_HEAD)
+                            .setDisplayName(StringUtil.color("&b" + newPlayer.getName()))
+                            .setLore(lore)
                             .setHead(newPlayer)
                             .build()));
+                    lore.clear();
                 }
+                pagination.update();
                 players = newPlayers;
             }
         });
