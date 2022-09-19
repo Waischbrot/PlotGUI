@@ -168,6 +168,13 @@ public abstract class RubyInventory implements InventoryHolder {
         fillColumn(new Button(material), column);
     }
 
+    public void fillBorders(Button button) {
+        fillColumn(button, 0);
+        fillColumn(button, 8);
+        fillRow(button, 0);
+        fillRow(button, (size / 9));
+    }
+
 
     public void addButton(@Nonnegative int slot, Button button) {
         if (inventory.getSize() <= slot) {
