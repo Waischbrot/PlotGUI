@@ -38,8 +38,10 @@ public class OnlineMenu extends RubyInventory {
             final var newPlayers = Bukkit.getOnlinePlayers();
             if (!newPlayers.equals(players)) {
                 pagination.getButtons().clear();
-                for (final Player player : newPlayers) {
-                    pagination.addButton(new Button(new ItemBuilder(Material.PLAYER_HEAD).build()));
+                for (final Player newPlayer : newPlayers) {
+                    pagination.addButton(new Button(new ItemBuilder(Material.PLAYER_HEAD)
+                            .setHead(newPlayer)
+                            .build()));
                 }
                 players = newPlayers;
             }

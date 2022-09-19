@@ -2,9 +2,7 @@ package de.waischbrot.libraries.itembuilder;
 
 import com.mojang.authlib.GameProfile;
 import com.mojang.authlib.properties.Property;
-import org.bukkit.Color;
-import org.bukkit.DyeColor;
-import org.bukkit.Material;
+import org.bukkit.*;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
@@ -28,6 +26,10 @@ public class ItemBuilder {
 
     public ItemBuilder(Material mat, short sh) {
         stack = new ItemStack(mat, 1, sh);
+    }
+
+    public ItemBuilder(ItemStack stack) {
+        this.stack = stack;
     }
 
     public ItemMeta getItemMeta() {
@@ -78,9 +80,9 @@ public class ItemBuilder {
         return this;
     }
 
-    public ItemBuilder setHead(String owner) {
+    public ItemBuilder setHead(OfflinePlayer owner) {
         SkullMeta meta = (SkullMeta) stack.getItemMeta();
-        meta.setOwner(owner);
+        meta.setOwningPlayer(owner);
         setItemMeta(meta);
         return this;
     }
