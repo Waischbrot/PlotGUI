@@ -123,11 +123,6 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>com.github.simplix-softworks</groupId>
-            <artifactId>simplixstorage</artifactId>
-            <version>3.2.5</version>
-        </dependency>
-        <dependency>
             <groupId>com.github.MilkBowl</groupId>
             <artifactId>VaultAPI</artifactId>
             <version>1.7</version>
