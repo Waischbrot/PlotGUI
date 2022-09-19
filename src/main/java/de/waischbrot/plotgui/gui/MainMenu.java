@@ -12,10 +12,4 @@ public class MainMenu extends RubyInventory {
     public MainMenu(@NotNull Player player) {
         super(player, "main", StringUtil.color("&8Hauptmenü"), 5);
     }
-
-    @Override
-    public boolean handleInventoryClickEvent(final @NotNull InventoryClickEvent event) {
-
-        return false;
-    }
 }
